@@ -13,4 +13,12 @@ app.get('/api/physicians', (req, res) => {
   });
 });
 
+app.get('/api/appointments/:physician', (req, res) => {
+  const physician = req.params.physician;
+  getAppointments(physician, (err, appointments) => {
+    if (err) res.status(500).send('error requesting appointments');
+    else res.send(appointments);
+  })
+})
+
 app.listen(port, () => console.log('listening on: ', port));

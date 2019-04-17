@@ -1,5 +1,5 @@
 const physicians = ['Hibbert, Julius', 'Krieger, Algemop', 'Riviera, Nick'];
-const appointments = {
+const appointmentList = {
   'Hibbert, Julius': {
     email: 'hibbert@notablehealth.com',
     firstName: 'Julius',
@@ -71,4 +71,4 @@ const appointments = {
   }
 };
 
-module.exports = { physicians, appointments };
+module.exports = { physicians, appointmentList };

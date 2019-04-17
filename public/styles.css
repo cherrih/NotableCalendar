@@ -6,9 +6,17 @@
 body {
   font-family: sans-serif;
 }
+
+/* ----- Physicians List ------- */
+
 .physiciansList-container {
   background-color: var(--main-grey);
 }
 h1 {
   color: var(--main-blue);
 }
+.logout-button {
+  background-color: var(--main-blue);
+  color: #ffffff;
+}
+

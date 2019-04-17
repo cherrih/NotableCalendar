@@ -6,8 +6,9 @@ class App extends React.Component{
     super(props);
     this.state = {
       physicians: [],
-      appointments: []
+      appointments: {}
     }
+    this.requestAppointments = this.requestAppointments.bind(this);
   }
 
   componentDidMount() {
@@ -21,11 +22,24 @@ class App extends React.Component{
       .catch((err) => console.log(err));
   }
 
+  requestAppointments(e) {
+    const physician = e.target.innerText;
+    fetch(`/api/appointments/${physician}`)
+      .then((appointments) => appointments.json())
+      .then((appointments) => {
+        console.log(appointments)
+        this.setState({
+          appointments: appointments[physician]
+        })
+      })
+      .catch((err) => console.log(err));
+  }
+
   render() {
     const { physicians } = this.state;
     return (
       <div>
-        <PhysiciansList physicians={physicians}/>
+        <PhysiciansList physicians={physicians} requestAppointments={this.requestAppointments}/>
       </div>
     )
   }

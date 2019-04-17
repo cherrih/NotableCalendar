@@ -1,10 +1,11 @@
-const { physicians, appointments } = require('./data.js');
+const { physicians, appointmentList } = require('./data.js');
 
 const getPhysicians = (cb) => {
   cb(null, physicians);
 };
 
-const getAppointments = (cb) => {
+const getAppointments = (physician, cb) => {
+  const appointments = appointmentList[physician];
   cb(null, appointments);
 };
 
