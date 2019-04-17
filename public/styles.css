@@ -2,11 +2,9 @@
   --main-blue: rgb(19,118,226); 
   --main-grey: rgb(239,239,241);
 }
-
 body {
   font-family: sans-serif;
 }
-
 .calendar-body {
   display: flex;
 }
