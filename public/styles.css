@@ -1,0 +1,14 @@
+:root {
+  --main-blue: rgb(19,118,226); 
+  --main-grey: rgb(239,239,241);
+}
+
+body {
+  font-family: sans-serif;
+}
+.physiciansList-container {
+  background-color: var(--main-grey);
+}
+h1 {
+  color: var(--main-blue);
+}

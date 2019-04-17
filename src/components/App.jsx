@@ -1,4 +1,5 @@
 import React from 'react';
+import PhysiciansList from './PhysiciansList.jsx';
 
 class App extends React.Component{
   constructor(props) {
@@ -21,8 +22,11 @@ class App extends React.Component{
   }
 
   render() {
+    const { physicians } = this.state;
     return (
-      <div>Hello world</div>
+      <div>
+        <PhysiciansList physicians={physicians}/>
+      </div>
     )
   }
 }
