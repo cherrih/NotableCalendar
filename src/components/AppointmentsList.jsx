@@ -2,7 +2,6 @@ import React from 'react';
 
 const AppointmentsList = ({ appointments }) => {
   if (appointments) {
-    console.log(appointments)
     const rows = appointments.patients.map((patient) => {
       return (
         <tr key={patient.name}>

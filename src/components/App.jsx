@@ -38,7 +38,7 @@ class App extends React.Component{
   render() {
     const { physicians, appointments } = this.state;
     return (
-      <div>
+      <div className="calendar-body">
         <PhysiciansList physicians={physicians} requestAppointments={this.requestAppointments}/>
         <AppointmentsList appointments={appointments}/>
       </div>
