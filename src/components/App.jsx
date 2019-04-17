@@ -5,6 +5,7 @@ class App extends React.Component{
     super(props);
   }
   render() {
+    console.log(physicians, appointments)
     return (
       <div>Hello world</div>
     )
