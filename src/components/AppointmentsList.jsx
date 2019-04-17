@@ -13,7 +13,7 @@ const AppointmentsList = ({ appointments }) => {
       )
     })
     return (
-      <div>
+      <div className="appointments-container">
         <h2>Dr. {appointments.firstName} {appointments.lastName}</h2>
         <h4>{appointments.email}</h4>
         <table className="appointment-table">

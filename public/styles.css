@@ -17,10 +17,11 @@ body {
   background-color: var(--main-grey);
   width: 30vw;
   height: 100vh;
-  padding: 5vw;
+  padding: 2vh 5vw;
 }
 h1 {
   color: var(--main-blue);
+  margin-bottom: 3vh;
 }
 li {
   width: 200px;
@@ -33,13 +34,37 @@ li:hover {
 .logout-button {
   background-color: var(--main-blue);
   color: #ffffff;
-  width: 100px;
+  width: 70px;
   text-align: center;
   border-radius: 5px;
   margin-top: 5vh;
   margin-left: auto;
   margin-right: auto;
+  padding: 5px;
+}
+.logout-button:hover {
+  cursor: pointer;
 }
 
 /* ------ Appointment Table ------ */
 
+.appointments-container {
+  margin-top: 8vh;
+  padding-left: 2vw;
+}
+table {
+  border-collapse: collapse;
+  width: 500px;
+}
+th {
+  background-color: var(--main-blue);
+  color: #ffffff;
+  text-align: left;
+  padding: 10px;
+}
+tr:nth-child(odd) {
+  background-color: var(--main-grey);
+}
+td {
+  padding: 10px;
+}

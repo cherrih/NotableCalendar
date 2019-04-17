@@ -36,6 +36,30 @@ const appointmentList = {
         time: '8:00AM',
         kind: 'New Patient'
       },
+      {
+        num: 2,
+        name: 'Cyril Figis',
+        time: '9:00AM',
+        kind: 'Follow-up'
+      },
+      {
+        num: 3,
+        name: 'Tony Dan',
+        time: '10:00AM',
+        kind: 'New Patient'
+      },
+      {
+        num: 4,
+        name: 'Zk Liu',
+        time: '9:00AM',
+        kind: 'Follow-up'
+      },
+      {
+        num: 5,
+        name: 'Roy Than',
+        time: '10:00AM',
+        kind: 'New Patient'
+      },
     ]
   },
   'Riviera, Nick': {
