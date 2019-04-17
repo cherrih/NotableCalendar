@@ -1,12 +1,13 @@
 import React from 'react';
 import PhysiciansList from './PhysiciansList.jsx';
+import AppointmentsList from './AppointmentsList.jsx';
 
 class App extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
       physicians: [],
-      appointments: {}
+      appointments: null
     }
     this.requestAppointments = this.requestAppointments.bind(this);
   }
@@ -27,19 +28,19 @@ class App extends React.Component{
     fetch(`/api/appointments/${physician}`)
       .then((appointments) => appointments.json())
       .then((appointments) => {
-        console.log(appointments)
         this.setState({
-          appointments: appointments[physician]
+          appointments: appointments
         })
       })
       .catch((err) => console.log(err));
   }
 
   render() {
-    const { physicians } = this.state;
+    const { physicians, appointments } = this.state;
     return (
       <div>
         <PhysiciansList physicians={physicians} requestAppointments={this.requestAppointments}/>
+        <AppointmentsList appointments={appointments}/>
       </div>
     )
   }
